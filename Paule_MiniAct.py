@@ -39,391 +39,50 @@ Total Machine Problem Grade	100
 Go to Module Lab SB:
     -copy the url of the home page for your s05/activity repo (URL on browser not the URL from clone button) and link it to our SB lab discussion:
 '''
+students = {}
 
-print("Mini Act")
-print("Rachel Green")
-rachelea1 = int(input("Enabling Assessment 1: "))
-rachelea2 = int(input("Enabling Assessment 2: "))
-rachelea3 = int(input("Enabling Assessment 3: "))
-rachelea4 = int(input("Enabling Assessment 4: "))
-rachelea5 = int(input("Enabling Assessment 5: "))
-rachelsa1 = int(input("Summative Assessment 1: "))
-rachelsa2 = int(input("Summative Assessment 2: "))
-rachelsa3 = int(input("Summative Assessment 3: "))
-rachelfa = int(input("Final Exam: "))
+for i in range(5):
 
-print("\n\nPhoebe Buffay")
-phoebeea1 = int(input("Enabling Assessment 1: "))
-phoebeea2 = int(input("Enabling Assessment 2: "))
-phoebeea3 = int(input("Enabling Assessment 3: "))
-phoebeea4 = int(input("Enabling Assessment 4: "))
-phoebeea5 = int(input("Enabling Assessment 5: "))
-phoebesa1 = int(input("Summative Assessment 1: "))
-phoebesa2 = int(input("Summative Assessment 2: "))
-phoebesa3 = int(input("Summative Assessment 3: "))
-phoebefa = int(input("Final Exam: "))
+    name = input(f"\nStudent {i+1}: ")
+    cp = 0
+    sa = 0
+    fe = 0
 
-print("\n\nRoss Geller")
-rossea1 = int(input("Enabling Assessment 1: "))
-rossea2 = int(input("Enabling Assessment 2: "))
-rossea3 = int(input("Enabling Assessment 3: "))
-rossea4 = int(input("Enabling Assessment 4: "))
-rossea5 = int(input("Enabling Assessment 5: "))
-rosssa1 = int(input("Summative Assessment 1: "))
-rosssa2 = int(input("Summative Assessment 2: "))
-rosssa3 = int(input("Summative Assessment 3: "))
-rossfa = int(input("Final Exam: "))
+    # Class Parti
+    for classp in range(5):
+        cp += float(input("Class participation {}: ".format(classp + 1)))
 
-print("\n\nJoey Tribbiani")
-joeyea1 = int(input("Enabling Assessment 1: "))
-joeyea2 = int(input("Enabling Assessment 2: "))
-joeyea3 = int(input("Enabling Assessment 3: "))
-joeyea4 = int(input("Enabling Assessment 4: "))
-joeyea5 = int(input("Enabling Assessment 5: "))
-joeysa1 = int(input("Summative Assessment 1: "))
-joeysa2 = int(input("Summative Assessment 2: "))
-joeysa3 = int(input("Summative Assessment 3: "))
-joeyfa = int(input("Final Exam: "))
+    # Summative Assessment
+    for summa in range(3):
+        sa += float(input("Summative assessment {}: ".format(summa + 1)))
 
-print("\n\nChandler Bing")
-chandlerea1 = int(input("Enabling Assessment 1: "))
-chandlerea2 = int(input("Enabling Assessment 2: "))
-chandlerea3 = int(input("Enabling Assessment 3: "))
-chandlerea4 = int(input("Enabling Assessment 4: "))
-chandlerea5 = int(input("Enabling Assessment 5: "))
-chandlersa1 = int(input("Summative Assessment 1: "))
-chandlersa2 = int(input("Summative Assessment 2: "))
-chandlersa3 = int(input("Summative Assessment 3: "))
-chandlerfa = int(input("Final Exam: "))
+    # For Final
+    for fexam in range(1):
+        fe = float(input("Final exam {}: ".format(fexam + 1)))
 
-rachelea = (((rachelea1+rachelea2+rachelea3+rachelea4+rachelea5)/5)*0.3)
-rachelsa = (((rachelsa1+rachelsa2+rachelsa3)/3)*0.3)
-rachelfe = (rachelfa*0.4)
-rachelave = (rachelea+rachelsa+rachelfe)
-print("=======================================")
-print("Student 1: Rachel Green\nDescription\t\tGrade\tRemark")
-print("-----------\t\t-----\t-------")
-for rachelremarkea1 in (rachelea1, rachelea2, rachelea3):
-    if rachelremarkea1 < 60:
-        print("Enabling Assessment\t", format(rachelremarkea1, ".2f"), "\tF")
-    elif rachelremarkea1 >= 60 and rachelremarkea1 <= 69:
-        print("Enabling Assessment\t", format(rachelremarkea1, ".2f"), "\tD")
-    elif rachelremarkea1 >= 70 and rachelremarkea1 <= 79:
-        print("Enabling Assessment\t", format(rachelremarkea1, ".2f"), "\tC")
-    elif rachelremarkea1 >= 80 and rachelremarkea1 <= 89:
-        print("Enabling Assessment\t", format(rachelremarkea1, ".2f"), "\tB")
-    elif rachelremarkea1 <= 100:
-        print("Enabling Assessment\t", format(rachelremarkea1, ".2f"), "\tA")
-for rachelremarkea2 in (rachelea4, rachelea5):
-    if rachelremarkea2 < 60:
-        print("Enabling Assessment\t", format(rachelremarkea2, ".2f"), "\tF")
-    elif rachelremarkea2 >= 60 and rachelremarkea2 <= 69:
-        print("Enabling Assessment\t", format(rachelremarkea2, ".2f"), "\tD")
-    elif rachelremarkea2 >= 70 and rachelremarkea2 <= 79:
-        print("Enabling Assessment\t", format(rachelremarkea2, ".2f"), "\tC")
-    elif rachelremarkea2 >= 80 and rachelremarkea2 <= 89:
-        print("Enabling Assessment\t", format(rachelremarkea2, ".2f"), "\tB")
-    elif rachelremarkea2 <= 100:
-        print("Enabling Assessment\t", format(rachelremarkea2, ".2f"), "\tA")
-print("---------------------------------------")
-for rachelremarksa in (rachelsa1, rachelsa2, rachelsa3):
-    if rachelremarksa < 60:
-        print("Summative Assessment\t", format(rachelremarksa, ".2f"), "\tF")
-    elif rachelremarksa >= 60 and rachelremarksa <= 69:
-        print("Summative Assessment\t", format(rachelremarksa, ".2f"), "\tD")
-    elif rachelremarksa >= 70 and rachelremarksa <= 79:
-        print("Summative Assessment\t", format(rachelremarksa, ".2f"), "\tC")
-    elif rachelremarksa >= 80 and rachelremarksa <= 89:
-        print("Summative Assessment\t", format(rachelremarksa, ".2f"), "\tB")
-    elif rachelremarksa <= 100:
-        print("Summative Assessment\t", format(rachelremarksa, ".2f"), "\tA")
-print("---------------------------------------")
-if rachelfa < 60:
-    print("Final Exam\t\t", format(rachelfa, ".2f"), "\tF")
-elif rachelfa >= 60 and rachelfa <= 69:
-    print("Final Exam\t\t", format(rachelfa, ".2f"), "\tD")
-elif rachelfa >= 70 and rachelfa <= 79:
-    print("Final Exam\t\t", format(rachelfa, ".2f"), "\tC")
-elif rachelfa >= 80 and rachelfa <= 89:
-    print("Final Exam\t\t", format(rachelfa, ".2f"), "\tB")
-elif rachelfa <= 100:
-    print("Final Exam\t\t", format(rachelfa, ".2f"), "\tA")
-print("---------------------------------------")
-if rachelave < 60:
-    print("Avarage\t\t\t", format(rachelave, ".2f"), "\tF")
-elif rachelave >= 60 and rachelave <= 69:
-    print("Avarage\t\t\t", format(rachelave, ".2f"), "\tD")
-elif rachelave >= 70 and rachelave <= 79:
-    print("Avarage\t\t\t", format(rachelave, ".2f"), "\tC")
-elif rachelave >= 80 and rachelave <= 89:
-    print("Avarage\t\t\t", format(rachelave, ".2f"), "\tB")
-elif rachelave <= 100:
-    print("Avarage\t\t\t", format(rachelave, ".2f"), "\tA")
-print("=======================================")
+    cp = (cp / 5) * 0.3
+    sa = (sa / 3) * 0.3
+    fe *= 0.4
+    ave = cp + sa + fe
+    rem = ' '
 
-# Pheobe
-phoebeea = (((phoebeea1+phoebeea2+phoebeea3+phoebeea4+phoebeea5)/5)*0.3)
-phoebesa = (((phoebesa1+phoebesa2+phoebesa3)/3)*0.3)
-phoebefe = (phoebefa*0.4)
-phoebeave = (phoebeea+phoebesa+phoebefe)
-print("\n\n=======================================")
-print("Student 2: Phoebe Buffay\nDescription\t\tGrade\tRemark")
-print("-----------\t\t-----\t-------")
-for phoeberemarkea1 in (phoebeea1, phoebeea2, phoebeea3):
-    if phoeberemarkea1 < 60:
-        print("Enabling Assessment\t", format(phoeberemarkea1, ".2f"), "\tF")
-    elif phoeberemarkea1 >= 60 and phoeberemarkea1 <= 69:
-        print("Enabling Assessment\t", format(phoeberemarkea1, ".2f"), "\tD")
-    elif phoeberemarkea1 >= 70 and phoeberemarkea1 <= 79:
-        print("Enabling Assessment\t", format(phoeberemarkea1, ".2f"), "\tC")
-    elif phoeberemarkea1 >= 80 and phoeberemarkea1 <= 89:
-        print("Enabling Assessment\t", format(phoeberemarkea1, ".2f"), "\tB")
-    elif phoeberemarkea1 <= 100:
-        print("Enabling Assessment\t", format(phoeberemarkea1, ".2f"), "\tA")
-for phoeberemarkea2 in (phoebeea4, phoebeea5):
-    if phoeberemarkea2 < 60:
-        print("Enabling Assessment\t", format(phoeberemarkea2, ".2f"), "\tF")
-    elif phoeberemarkea2 >= 60 and phoeberemarkea2 <= 69:
-        print("Enabling Assessment\t", format(phoeberemarkea2, ".2f"), "\tD")
-    elif phoeberemarkea2 >= 70 and phoeberemarkea2 <= 79:
-        print("Enabling Assessment\t", format(phoeberemarkea2, ".2f"), "\tC")
-    elif phoeberemarkea2 >= 80 and phoeberemarkea2 <= 89:
-        print("Enabling Assessment\t", format(phoeberemarkea2, ".2f"), "\tB")
-    elif phoeberemarkea2 <= 100:
-        print("Enabling Assessment\t", format(phoeberemarkea2, ".2f"), "\tA")
-print("---------------------------------------")
-for phoeberemarksa in (phoebesa1, phoebesa2, phoebesa3):
-    if phoeberemarksa < 60:
-        print("Summative Assessment\t", format(phoeberemarksa, ".2f"), "\tF")
-    elif phoeberemarksa >= 60 and phoeberemarksa <= 69:
-        print("Summative Assessment\t", format(phoeberemarksa, ".2f"), "\tD")
-    elif phoeberemarksa >= 70 and phoeberemarksa <= 79:
-        print("Summative Assessment\t", format(phoeberemarksa, ".2f"), "\tC")
-    elif phoeberemarksa >= 80 and phoeberemarksa <= 89:
-        print("Summative Assessment\t", format(phoeberemarksa, ".2f"), "\tB")
-    elif phoeberemarksa <= 100:
-        print("Summative Assessment\t", format(phoeberemarksa, ".2f"), "\tA")
-print("---------------------------------------")
-if phoebefa < 60:
-    print("Final Exam\t\t", format(phoebefa, ".2f"), "\tF")
-elif phoebefa >= 60 and phoebefa <= 69:
-    print("Final Exam\t\t", format(phoebefa, ".2f"), "\tD")
-elif phoebefa >= 70 and phoebefa <= 79:
-    print("Final Exam\t\t", format(phoebefa, ".2f"), "\tC")
-elif phoebefa >= 80 and phoebefa <= 89:
-    print("Final Exam\t\t", format(phoebefa, ".2f"), "\tB")
-elif phoebefa <= 100:
-    print("Final Exam\t\t", format(phoebefa, ".2f"), "\tA")
-print("---------------------------------------")
-if phoebeave < 60:
-    print("Average\t\t\t", format(phoebeave, ".2f"), "\tF")
-elif phoebeave >= 60 and phoebeave <= 69:
-    print("Average\t\t\t", format(phoebeave, ".2f"), "\tD")
-elif phoebeave >= 70 and phoebeave <= 79:
-    print("Average\t\t\t", format(phoebeave, ".2f"), "\tC")
-elif phoebeave >= 80 and phoebeave <= 89:
-    print("Average\t\t\t", format(phoebeave, ".2f"), "\tB")
-elif phoebeave <= 100:
-    print("Average\t\t\t", format(phoebeave, ".2f"), "\tA")
-print("=======================================")
+    if ave >= 90:
+        rem = "A"
+    elif ave >= 80:
+        rem = "B"
+    elif ave >= 70:
+        rem = "C"
+    elif ave >= 60:
+        rem = "D"
+    else:
+        rem = "F"
 
+    students[name] = ave, rem
 
-# Ross
-rossea = (((rossea1+rossea2+rossea3+rossea4+rossea5)/5)*0.3)
-rosssa = (((rosssa1+rosssa2+rosssa3)/3)*0.3)
-rossfe = (rossfa*0.4)
-rossave = (rossea+rosssa+rossfe)
-print("\n\n=======================================")
-print("Student 3: Ross Geller\nDescription\t\tGrade\tRemark")
-print("-----------\t\t-----\t-------")
-for rossremarkea1 in (rossea1, rossea2, rossea3):
-    if rossremarkea1 < 60:
-        print("Enabling Assessment\t", format(rossremarkea1, ".2f"), "\tF")
-    elif rossremarkea1 >= 60 and rossremarkea1 <= 69:
-        print("Enabling Assessment\t", format(rossremarkea1, ".2f"), "\tD")
-    elif rossremarkea1 >= 70 and rossremarkea1 <= 79:
-        print("Enabling Assessment\t", format(rossremarkea1, ".2f"), "\tC")
-    elif rossremarkea1 >= 80 and rossremarkea1 <= 89:
-        print("Enabling Assessment\t", format(rossremarkea1, ".2f"), "\tB")
-    elif rossremarkea1 <= 100:
-        print("Enabling Assessment\t", format(rossremarkea1, ".2f"), "\tA")
-for rossremarkea2 in (rossea4, rossea5):
-    if rossremarkea2 < 60:
-        print("Enabling Assessment\t", format(rossremarkea2, ".2f"), "\tF")
-    elif rossremarkea2 >= 60 and rossremarkea2 <= 69:
-        print("Enabling Assessment\t", format(rossremarkea2, ".2f"), "\tD")
-    elif rossremarkea2 >= 70 and rossremarkea2 <= 79:
-        print("Enabling Assessment\t", format(rossremarkea2, ".2f"), "\tC")
-    elif rossremarkea2 >= 80 and rossremarkea2 <= 89:
-        print("Enabling Assessment\t", format(rossremarkea2, ".2f"), "\tB")
-    elif rossremarkea2 <= 100:
-        print("Enabling Assessment\t", format(rossremarkea2, ".2f"), "\tA")
-print("---------------------------------------")
-for rossremarksa in (rosssa1, rosssa2, rosssa3):
-    if rossremarksa < 60:
-        print("Summative Assessment\t", format(rossremarksa, ".2f"), "\tF")
-    elif rossremarksa >= 60 and rossremarksa <= 69:
-        print("Summative Assessment\t", format(rossremarksa, ".2f"), "\tD")
-    elif rossremarksa >= 70 and rossremarksa <= 79:
-        print("Summative Assessment\t", format(rossremarksa, ".2f"), "\tC")
-    elif rossremarksa >= 80 and rossremarksa <= 89:
-        print("Summative Assessment\t", format(rossremarksa, ".2f"), "\tB")
-    elif rossremarksa <= 100:
-        print("Summative Assessment\t", format(rossremarksa, ".2f"), "\tA")
-print("---------------------------------------")
-if rossfa < 60:
-    print("Final Exam\t\t", format(rossfa, ".2f"), "\tF")
-elif rossfa >= 60 and rossfa <= 69:
-    print("Final Exam\t\t", format(rossfa, ".2f"), "\tD")
-elif rossfa >= 70 and rossfa <= 79:
-    print("Final Exam\t\t", format(rossfa, ".2f"), "\tC")
-elif rossfa >= 80 and rossfa <= 89:
-    print("Final Exam\t\t", format(rossfa, ".2f"), "\tB")
-elif rossfa <= 100:
-    print("Final Exam\t\t", format(rossfa, ".2f"), "\tA")
-print("---------------------------------------")
-if rossave < 60:
-    print("Average\t\t\t", format(rossave, ".2f"), "\tF")
-elif rossave >= 60 and rossave <= 69:
-    print("Average\t\t\t", format(rossave, ".2f"), "\tD")
-elif rossave >= 70 and rossave <= 79:
-    print("Average\t\t\t", format(rossave, ".2f"), "\tC")
-elif rossave >= 80 and rossave <= 89:
-    print("Average\t\t\t", format(rossave, ".2f"), "\tB")
-elif rossave <= 100:
-    print("Average\t\t\t", format(rossave, ".2f"), "\tA")
-print("=======================================")
+print("\n")
+print(f"{'Student':<15} {'Total Grade':<15} {'Letter Grade':<10}")
 
-
-# Joey
-joeyea = (((joeyea1+joeyea2+joeyea3+joeyea4+joeyea5)/5)*0.3)
-joeysa = (((joeysa1+joeysa2+joeysa3)/3)*0.3)
-joeyfe = (joeyfa*0.4)
-joeyave = (joeyea+joeysa+joeyfe)
-print("\n\n=======================================")
-print("Student 4: Joey Tribbiani\nDescription\t\tGrade\tRemark")
-print("-----------\t\t-----\t-------")
-for joeyremarkea1 in (joeyea1, joeyea2, joeyea3):
-    if joeyremarkea1 < 60:
-        print("Enabling Assessment\t", format(joeyremarkea1, ".2f"), "\tF")
-    elif joeyremarkea1 >= 60 and joeyremarkea1 <= 69:
-        print("Enabling Assessment\t", format(joeyremarkea1, ".2f"), "\tD")
-    elif joeyremarkea1 >= 70 and joeyremarkea1 <= 79:
-        print("Enabling Assessment\t", format(joeyremarkea1, ".2f"), "\tC")
-    elif joeyremarkea1 >= 80 and joeyremarkea1 <= 89:
-        print("Enabling Assessment\t", format(joeyremarkea1, ".2f"), "\tB")
-    elif joeyremarkea1 <= 100:
-        print("Enabling Assessment\t", format(joeyremarkea1, ".2f"), "\tA")
-for joeyremarkea2 in (joeyea4, joeyea5):
-    if joeyremarkea2 < 60:
-        print("Enabling Assessment\t", format(joeyremarkea2, ".2f"), "\tF")
-    elif joeyremarkea2 >= 60 and joeyremarkea2 <= 69:
-        print("Enabling Assessment\t", format(joeyremarkea2, ".2f"), "\tD")
-    elif joeyremarkea2 >= 70 and joeyremarkea2 <= 79:
-        print("Enabling Assessment\t", format(joeyremarkea2, ".2f"), "\tC")
-    elif joeyremarkea2 >= 80 and joeyremarkea2 <= 89:
-        print("Enabling Assessment\t", format(joeyremarkea2, ".2f"), "\tB")
-    elif joeyremarkea2 <= 100:
-        print("Enabling Assessment\t", format(joeyremarkea2, ".2f"), "\tA")
-print("---------------------------------------")
-for joeyremarksa in (joeysa1, joeysa2, joeysa3):
-    if joeyremarksa < 60:
-        print("Summative Assessment\t", format(joeyremarksa, ".2f"), "\tF")
-    elif joeyremarksa >= 60 and joeyremarksa <= 69:
-        print("Summative Assessment\t", format(joeyremarksa, ".2f"), "\tD")
-    elif joeyremarksa >= 70 and joeyremarksa <= 79:
-        print("Summative Assessment\t", format(joeyremarksa, ".2f"), "\tC")
-    elif joeyremarksa >= 80 and joeyremarksa <= 89:
-        print("Summative Assessment\t", format(joeyremarksa, ".2f"), "\tB")
-    elif joeyremarksa <= 100:
-        print("Summative Assessment\t", format(joeyremarksa, ".2f"), "\tA")
-print("---------------------------------------")
-if joeyfa < 60:
-    print("Final Exam\t\t", format(joeyfa, ".2f"), "\tF")
-elif joeyfa >= 60 and joeyfa <= 69:
-    print("Final Exam\t\t", format(joeyfa, ".2f"), "\tD")
-elif joeyfa >= 70 and joeyfa <= 79:
-    print("Final Exam\t\t", format(joeyfa, ".2f"), "\tC")
-elif joeyfa >= 80 and joeyfa <= 89:
-    print("Final Exam\t\t", format(joeyfa, ".2f"), "\tB")
-elif joeyfa <= 100:
-    print("Final Exam\t\t", format(joeyfa, ".2f"), "\tA")
-print("---------------------------------------")
-if joeyave < 60:
-    print("Average\t\t\t", format(joeyave, ".2f"), "\tF")
-elif joeyave >= 60 and joeyave <= 69:
-    print("Average\t\t\t", format(joeyave, ".2f"), "\tD")
-elif joeyave >= 70 and joeyave <= 79:
-    print("Average\t\t\t", format(joeyave, ".2f"), "\tC")
-elif joeyave >= 80 and joeyave <= 89:
-    print("Average\t\t\t", format(joeyave, ".2f"), "\tB")
-elif joeyave <= 100:
-    print("Average\t\t\t", format(joeyave, ".2f"), "\tA")
-print("=======================================")
-
-chandlerea = (
-    ((chandlerea1+chandlerea2+chandlerea3+chandlerea4+chandlerea5)/5)*0.3)
-chandlersa = (((chandlersa1+chandlersa2+chandlersa3)/3)*0.3)
-chandlerfe = (chandlerfa*0.4)
-chandlerave = (chandlerea+chandlersa+chandlerfe)
-# Chandler
-print("\n\n=======================================")
-print("Student 5: Chandler Bing\nDescription\t\tGrade\tRemark")
-print("-----------\t\t-----\t-------")
-for chandlerremarkea1 in (chandlerea1, chandlerea2, chandlerea3):
-    if chandlerremarkea1 < 60:
-        print("Enabling Assessment\t", format(chandlerremarkea1, ".2f"), "\tF")
-    elif chandlerremarkea1 >= 60 and chandlerremarkea1 <= 69:
-        print("Enabling Assessment\t", format(chandlerremarkea1, ".2f"), "\tD")
-    elif chandlerremarkea1 >= 70 and chandlerremarkea1 <= 79:
-        print("Enabling Assessment\t", format(chandlerremarkea1, ".2f"), "\tC")
-    elif chandlerremarkea1 >= 80 and chandlerremarkea1 <= 89:
-        print("Enabling Assessment\t", format(chandlerremarkea1, ".2f"), "\tB")
-    elif chandlerremarkea1 <= 100:
-        print("Enabling Assessment\t", format(chandlerremarkea1, ".2f"), "\tA")
-for chandlerremarkea2 in (chandlerea4, chandlerea5):
-    if chandlerremarkea2 < 60:
-        print("Enabling Assessment\t", format(chandlerremarkea2, ".2f"), "\tF")
-    elif chandlerremarkea2 >= 60 and chandlerremarkea2 <= 69:
-        print("Enabling Assessment\t", format(chandlerremarkea2, ".2f"), "\tD")
-    elif chandlerremarkea2 >= 70 and chandlerremarkea2 <= 79:
-        print("Enabling Assessment\t", format(chandlerremarkea2, ".2f"), "\tC")
-    elif chandlerremarkea2 >= 80 and chandlerremarkea2 <= 89:
-        print("Enabling Assessment\t", format(chandlerremarkea2, ".2f"), "\tB")
-    elif chandlerremarkea2 <= 100:
-        print("Enabling Assessment\t", format(chandlerremarkea2, ".2f"), "\tA")
-print("---------------------------------------")
-for chandlerremarksa in (chandlersa1, chandlersa2, chandlersa3):
-    if chandlerremarksa < 60:
-        print("Summative Assessment\t", format(chandlerremarksa, ".2f"), "\tF")
-    elif chandlerremarksa >= 60 and chandlerremarksa <= 69:
-        print("Summative Assessment\t", format(chandlerremarksa, ".2f"), "\tD")
-    elif chandlerremarksa >= 70 and chandlerremarksa <= 79:
-        print("Summative Assessment\t", format(chandlerremarksa, ".2f"), "\tC")
-    elif chandlerremarksa >= 80 and chandlerremarksa <= 89:
-        print("Summative Assessment\t", format(chandlerremarksa, ".2f"), "\tB")
-    elif chandlerremarksa <= 100:
-        print("Summative Assessment\t", format(chandlerremarksa, ".2f"), "\tA")
-print("---------------------------------------")
-if chandlerfa < 60:
-    print("Final Exam\t\t", format(chandlerfa, ".2f"), "\tF")
-elif chandlerfa >= 60 and chandlerfa <= 69:
-    print("Final Exam\t\t", format(chandlerfa, ".2f"), "\tD")
-elif chandlerfa >= 70 and chandlerfa <= 79:
-    print("inal Exam\t\t", format(chandlerfa, ".2f"), "\tC")
-elif chandlerfa >= 80 and chandlerfa <= 89:
-    print("Final Exam\t\t", format(chandlerfa, ".2f"), "\tB")
-elif chandlerfa <= 100:
-    print("Final Exam\t\t", format(chandlerfa, ".2f"), "\tA")
-print("---------------------------------------")
-if chandlerave < 60:
-    print("Average\t\t\t", format(chandlerave, ".2f"), "\tF")
-elif chandlerave >= 60 and chandlerave <= 69:
-    print("Average\t\t\t", format(chandlerave, ".2f"), "\tD")
-elif chandlerave >= 70 and chandlerave <= 79:
-    print("Average\t\t\t", format(chandlerave, ".2f"), "\tC")
-elif chandlerave >= 80 and chandlerave <= 89:
-    print("Average\t\t\t", format(chandlerave, ".2f"), "\tB")
-elif chandlerave <= 100:
-    print("Average\t\t\t", format(chandlerave, ".2f"), "\tA")
-print("=======================================")
+for name, grades in students.items():
+    ave = grades[0]
+    rem = grades[1]
+    print(f"{name:<15} {ave:<15.2f} {rem:<10}")
